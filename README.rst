@@ -15,3 +15,4 @@ George
         :target: http://dx.doi.org/10.5281/zenodo.11989
 
 Read the documentation at: `dan.iel.fm/george <http://dan.iel.fm/george>`_.
+use this file to fast GP
