@@ -8,15 +8,16 @@ import sys
 import numpy as np
 import matplotlib.pyplot as pl
 
-d = os.path.dirname
-sys.path.insert(0, d(d(os.path.abspath(__file__))))
+#d = os.path.dirname
+#sys.path.insert(0, d(d(os.path.abspath(__file__))))  #this well change dir doesn't work
 import george
 from george.kernels import ExpSquaredKernel
 
 np.random.seed(12345)
 
 kernel = ExpSquaredKernel([3, 0.5], ndim=2)
-gp = george.HODLRGP(kernel, tol=1e-10)
+#gp = george.HODLRGP(kernel, tol=1e-10)
+gp = george.GP(kernel, solver = george.HODLRSolver，tol=1e-10);  #reference the tutorials
 
 x, y = np.linspace(-5, 5, 62), np.linspace(-5, 5, 60)
 x, y = np.meshgrid(x, y, indexing="ij")
