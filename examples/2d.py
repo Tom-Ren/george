@@ -29,7 +29,7 @@ print(len(samples))
 i = george.utils.nd_sort_samples(samples)
 
 img = gp.get_matrix(samples[i])
-pl.imshow(img, cmap="gray", interpolation="nearest")
+pl.imshow(img, cmap="gray", interpolation="nearest")  #should be gray for sample
 pl.gca().set_xticklabels([])
 pl.gca().set_yticklabels([])
 pl.colorbar()
